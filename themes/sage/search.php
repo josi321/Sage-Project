@@ -2,59 +2,47 @@
 /**
  * The template for displaying search results pages.
  *
- * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Shapely
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
  */
-get_header();
-$layout_class = ( function_exists( 'shapely_get_layout_class' ) ) ? shapely_get_layout_class() : ''; ?>
-	<div class="row">
-		<?php
-		if ( $layout_class == 'sidebar-left' ):
-			get_sidebar();
-		endif;
-		?>
-		<section id="primary" class="content-area col-md-8 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>">
-			<main id="main" class="site-main" role="main">
 
-				<?php
-				if ( have_posts() ) : ?>
+get_header(); ?>
 
-					<header class="entry-header nolist">
-						<h1 class="post-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'shapely' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-					</header><!-- .page-header -->
+<div class="row">
+	<div class="small-12 large-8 columns" role="main">
 
-					<?php
-					/* Start the Loop */
-					while ( have_posts() ) : the_post();
+		<?php do_action( 'foundationpress_before_content' ); ?>
 
-						/**
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', 'search' );
+		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
 
-					endwhile;
+	<?php if ( have_posts() ) : ?>
 
-					if ( function_exists( "shapely_pagination" ) ):
-						shapely_pagination();
-					endif;
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+		<?php endwhile; ?>
 
-				else :
+		<?php else : ?>
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-					get_template_part( 'template-parts/content', 'none' );
+	<?php endif;?>
 
-				endif; ?>
+	<?php do_action( 'foundationpress_before_pagination' ); ?>
 
-			</main><!-- #main -->
-		</section><!-- #primary -->
+	<?php
+	if ( function_exists( 'foundationpress_pagination' ) ) :
+		foundationpress_pagination();
+	elseif ( is_paged() ) :
+	?>
 
-		<?php
-		if ( $layout_class == 'sidebar-right' ):
-			get_sidebar();
-		endif;
-		?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+		</nav>
+	<?php endif; ?>
+
+	<?php do_action( 'foundationpress_after_content' ); ?>
+
 	</div>
-<?php
-get_footer();
+	<?php get_sidebar(); ?>
+</div>
+<?php get_footer();

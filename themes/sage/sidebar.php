@@ -1,18 +1,14 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The sidebar containing the main widget area
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Shapely
- */ ?>
-    
-<?php
-if ( ! is_active_sidebar( 'sidebar-1' ) || ( function_exists('shapely_show_sidebar') && !shapely_show_sidebar() ) ) {
-	return;
-}
-?>
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
+ */
 
-<aside id="secondary" class="widget-area col-md-4 hidden-sm" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+?>
+<aside class="sidebar">
+	<?php do_action( 'foundationpress_before_sidebar' ); ?>
+	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
+	<?php do_action( 'foundationpress_after_sidebar' ); ?>
+</aside>
