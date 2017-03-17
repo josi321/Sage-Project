@@ -1,50 +1,34 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
+ * Contains the closing of the "off-canvas-wrap" div and all content after.
  *
- * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Shapely
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
  */
 
 ?>
 
-</div><!-- #main -->
-</section><!-- section -->
-
-<div class="footer-callout">
-	<?php shapely_footer_callout(); ?>
-</div>
-
-<footer id="colophon" class="site-footer footer bg-dark" role="contentinfo">
-	<div class="container footer-inner">
-		<div class="row">
-			<?php get_sidebar( 'footer' ); ?>
+		</section>
+		<div id="footer-container">
+			<footer id="footer">
+				<?php do_action( 'foundationpress_before_footer' ); ?>
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<?php do_action( 'foundationpress_after_footer' ); ?>
+			</footer>
 		</div>
 
-		<div class="row">
-			<div class="site-info col-sm-6">
-				<div class="copyright-text">
-					<?php echo wp_kses_post( get_theme_mod( 'shapely_footer_copyright' ) ); ?>
-				</div>
-				<div class="footer-credits">
-					<?php shapely_footer_info(); ?>
-				</div>
-			</div><!-- .site-info -->
-			<div class="col-sm-6 text-right">
-				<?php shapely_social_icons(); ?>
-			</div>
-		</div>
-	</div>
+		<?php do_action( 'foundationpress_layout_end' ); ?>
 
-	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top"><i class="fa fa-angle-up"></i></a>
-</footer><!-- #colophon -->
-</div>
-</div><!-- #page -->
+<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
+		</div><!-- Close off-canvas wrapper inner -->
+	</div><!-- Close off-canvas wrapper -->
+</div><!-- Close off-canvas content wrapper -->
+<?php endif; ?>
+
 
 <?php wp_footer(); ?>
-
+<?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>
 </html>
