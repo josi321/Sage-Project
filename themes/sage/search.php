@@ -1,48 +1,48 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * The template for displaying search results pages
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package sage
  */
 
 get_header(); ?>
 
-<div class="row">
-	<div class="small-12 large-8 columns" role="main">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
+		<?php
+		if ( have_posts() ) : ?>
 
-		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'sage' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
 
-	<?php if ( have_posts() ) : ?>
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
 
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-		<?php endwhile; ?>
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'search' );
 
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			endwhile;
 
-	<?php endif;?>
+			the_posts_navigation();
 
-	<?php do_action( 'foundationpress_before_pagination' ); ?>
+		else :
 
-	<?php
-	if ( function_exists( 'foundationpress_pagination' ) ) :
-		foundationpress_pagination();
-	elseif ( is_paged() ) :
-	?>
+			get_template_part( 'template-parts/content', 'none' );
 
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php endif; ?>
+		endif; ?>
 
-	<?php do_action( 'foundationpress_after_content' ); ?>
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
-	</div>
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer();
+<?php
+get_sidebar();
+get_footer();

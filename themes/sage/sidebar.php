@@ -2,13 +2,16 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package sage
  */
 
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
 ?>
-<aside class="sidebar">
-	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
-	<?php do_action( 'foundationpress_after_sidebar' ); ?>
-</aside>
+
+<aside id="secondary" class="widget-area" role="complementary">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
