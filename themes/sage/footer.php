@@ -2,33 +2,27 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the "off-canvas-wrap" div and all content after.
+ * Contains the closing of the #content div and all content after.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package sage
  */
 
 ?>
 
-		</section>
-		<div id="footer-container">
-			<footer id="footer">
-				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-				<?php do_action( 'foundationpress_after_footer' ); ?>
-			</footer>
-		</div>
+	</div><!-- #content -->
 
-		<?php do_action( 'foundationpress_layout_end' ); ?>
-
-<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-		</div><!-- Close off-canvas wrapper inner -->
-	</div><!-- Close off-canvas wrapper -->
-</div><!-- Close off-canvas content wrapper -->
-<?php endif; ?>
-
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sage' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sage' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sage' ), 'sage', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
-<?php do_action( 'foundationpress_before_closing_body' ); ?>
+
 </body>
 </html>
