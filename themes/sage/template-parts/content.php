@@ -15,6 +15,7 @@
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<?php foundationpress_entry_meta(); ?>
 	</header>
+	hello puta!
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
 	</div>

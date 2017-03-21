@@ -1,4 +1,5 @@
 <?php
+include 'lib.php';
 /**
  * Author: Ole Fredrik Lie
  * URL: http://olefredrik.com
