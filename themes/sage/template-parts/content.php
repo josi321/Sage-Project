@@ -7,7 +7,6 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
