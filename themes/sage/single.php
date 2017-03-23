@@ -1,3 +1,4 @@
+single
 <?php
 /**
  * The template for displaying all single posts and attachments
@@ -8,13 +9,14 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
 
-<div id="single-post" role="main">
 
-<?php do_action( 'foundationpress_before_content' ); ?>
+<!-- <div id="single-post" role="main">
+
+<?php do_action( 'foundationpress_before_content' ); ?> -->
 <?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+	<?php get_template_part( 'template-parts/content' , get_post_type() ); ?>
+	<!-- <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php foundationpress_entry_meta(); ?>
@@ -32,10 +34,10 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php comments_template(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
-	</article>
+	</article> -->
 <?php endwhile;?>
 
-<?php do_action( 'foundationpress_after_content' ); ?>
+<!-- <?php do_action( 'foundationpress_after_content' ); ?>
 <?php get_sidebar(); ?>
-</div>
+</div> -->
 <?php get_footer();
