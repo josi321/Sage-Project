@@ -7275,6 +7275,7 @@ body#tinymce {
 [data-whatinput="mouse"] a:focus, button:focus [data-whatinput="touch"] a:focus, button:focus {
   outline: none; }
 
+
 .archive-container-events {
   width: 70%;
   margin: 0 auto;
@@ -7456,6 +7457,7 @@ body#tinymce {
         min-width: 100px; }
       .entry-header #trapezoide .labelTitle h1 {
         padding-top: 5px !important; } }
+
 
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
@@ -8010,6 +8012,8 @@ body#tinymce {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
 
+
+
 .about-container .blueline {
   background-color: #00e5ee;
   height: 1vh;
@@ -8258,5 +8262,6 @@ body#tinymce {
   drop-shadow: 1em;
   z-index: 2;
   text-align: center; }
+
 
 /*# sourceMappingURL=foundation.css.map */
