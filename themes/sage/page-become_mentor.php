@@ -52,6 +52,9 @@ im in the become a mentor or partner page!
 <div class="subscribe">
   <h3>Join our Newsletter</h3>
   <h4>Not ready to get involved just yet? Stay connected!</h4>
+  <div class="email">
+    <?php echo do_shortcode('[mc4wp_form id="56"]'); ?>
+  </div>
 </div>
 
 <?php wp_footer(); ?>
