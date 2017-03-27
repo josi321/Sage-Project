@@ -11,7 +11,7 @@
  */
 
  get_header(); ?>
- <?php get_template_part( 'template-parts/upper-banner' ); ?>
+<!--  <?php get_template_part( 'template-parts/upper-banner' ); ?> -->
 
  <div id="page" role="main">
 
