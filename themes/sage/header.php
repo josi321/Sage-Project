@@ -1,68 +1,56 @@
 <?php
 /**
- * The header for our theme.
+ * The template for displaying the header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Displays all of the head element and everything up until the "container" div.
  *
- * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Shapely
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
  */
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+?>
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?> >
+	<head>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<?php wp_head(); ?>
+	</head>
+	<body <?php body_class(); ?>>
+	<?php do_action( 'foundationpress_after_body' ); ?>
 
-	<?php wp_head(); ?>
-</head>
+	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
+	<div class="off-canvas-wrapper">
+		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
+	<?php endif; ?>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shapely' ); ?></a>
+	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="nav-container">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="container nav-bar">
-					<div class="row">
-						<div class="module left site-title-container">
-							<?php shapely_get_header_logo(); ?>
-						</div>
-						<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
-							<i class="fa fa-bars"></i>
-						</div>
-						<div class="module-group right">
-							<div class="module left">
-								<?php shapely_header_menu(); // main navigation ?>
-							</div>
-							<!--end of menu module-->
-							<div class="module widget-handle search-widget-handle left hidden-xs hidden-sm">
-								<div class="search">
-									<i class="fa fa-search"></i>
-									<span class="title"><?php _e( "Site Search", 'shapely' ); ?></span>
-								</div>
-								<div class="function"><?php
-									get_search_form(); ?>
-								</div>
-							</div>
-						</div>
-						<!--end of module group-->
-					</div>
-				</div>
-			</nav><!-- #site-navigation -->
-		</div>
-	</header><!-- #masthead -->
-	<div id="content" class="main-container">
-		<?php if ( ! is_page_template( 'template-home.php' ) ): ?>
-			<div class="header-callout">
-				<?php shapely_top_callout(); ?>
+		<div class="title-bar" data-responsive-toggle="site-navigation">
+			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
+			<div class="title-bar-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
-		<?php endif; ?>
+		</div>
 
-		<section class="content-area <?php echo ( get_theme_mod( 'top_callout', true ) ) ? '' : ' pt0 ' ?>">
-			<div id="main" class="<?php echo ( ! is_page_template( 'template-home.php' ) ) ? 'container' : ''; ?>"
-			     role="main">
+		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+			<div class="top-bar-left">
+				<ul class="menu">
+					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+				<?php foundationpress_top_bar_r(); ?>
+
+				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
+					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+				<?php endif; ?>
+			</div>
+		</nav>
+	</header>
+
+	<section class="container">
+		<?php do_action( 'foundationpress_after_header' );
