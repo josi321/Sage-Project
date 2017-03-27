@@ -8010,4 +8010,253 @@ body#tinymce {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
 
+.about-container .blueline {
+  background-color: #00e5ee;
+  height: 1vh;
+  width: 15%;
+  border-radius: 15%;
+  margin: 0 auto 1rem auto; }
+
+.about-container h1 {
+  color: red;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1rem 0; }
+
+.about-container .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 2rem 0; }
+  .about-container .about .col1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 0 5%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 85%; }
+  .about-container .about .col2 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0 5%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 85%; }
+
+.quote-block {
+  background-color: #F9F9F9;
+  padding: 3rem;
+  position: relative; }
+  .quote-block .quote-mark p {
+    position: absolute;
+    color: #E3E3E3;
+    font-size: 8rem;
+    left: 75%;
+    top: -12%; }
+  .quote-block .quote {
+    color: red;
+    font-size: 1.5rem;
+    text-align: left;
+    /*margin: 0 auto;*/
+    width: 100%;
+    padding-top: 1rem; }
+  .quote-block .quote-author {
+    color: grey;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-top: 1rem; }
+
+/*DESKTOP*/
+@media only screen and (min-width: 768px) {
+  .about-container .blueline {
+    width: 4%; }
+  .about-container .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%; }
+    .about-container .about .col1 {
+      width: 50%; }
+    .about-container .about .col2 {
+      width: 50%; }
+  .quote-block {
+    padding: 5rem; }
+    .quote-block .quote-mark p {
+      font-size: 10rem;
+      top: -9%; }
+    .quote-block .quote {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0 auto;
+      width: 50%; }
+    .quote-block .quote-author {
+      font-size: 1rem; } }
+
+.become-container {
+  background-color: #FAFAFA;
+  /*background-color: blue; so i can see */
+  padding-bottom: 4rem; }
+  .become-container .subtitle {
+    text-align: center;
+    width: 83%;
+    color: #696969;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 1rem 0; }
+  .become-container .become-mentor-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .become-container .become-mentor-flex .box1 {
+      background-color: white;
+      margin: 1rem 0;
+      width: 70%;
+      height: auto;
+      -webkit-box-shadow: 0px 10px 30px #ccc;
+              box-shadow: 0px 10px 30px #ccc; }
+      .become-container .become-mentor-flex .box1 h2 {
+        background-color: #F4003C;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.75rem; }
+      .become-container .become-mentor-flex .box1 .icons {
+        display: block;
+        margin: auto;
+        width: 40%; }
+      .become-container .become-mentor-flex .box1 p {
+        color: grey;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 1rem; }
+
+.partner-logos h2 {
+  color: #F4003C;
+  margin: 0 auto;
+  font-size: 2rem !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1rem; }
+
+.partner-logos .blueline {
+  background-color: #00e5ee;
+  height: 1vh;
+  width: 15%;
+  border-radius: 15%;
+  margin: 1rem auto 0 auto; }
+
+.logo_showcase {
+  margin-bottom: 2rem !important; }
+  .logo_showcase .slick-slide {
+    height: 35%;
+    padding: 2rem 1rem; }
+    .logo_showcase .slick-slide img {
+      width: 100%;
+      height: 170px; }
+
+.subscribe {
+  background-color: #FAFAFA;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0; }
+  .subscribe h3 {
+    color: #F4003C;
+    font-size: 2rem; }
+  .subscribe h4 {
+    color: #696969;
+    font-size: 1.5rem;
+    padding: 0 0.5rem; }
+  .subscribe .subscribe-email {
+    display: inline-block; }
+    .subscribe .subscribe-email .email-btn {
+      background-color: red;
+      padding: 1rem 3rem;
+      color: white;
+      font-size: 1rem; }
+
+/*DESKTOP*/
+@media only screen and (min-width: 768px) {
+  .become-container .subtitle {
+    width: 82%;
+    font-size: 2.4rem;
+    padding: 2.5rem 0; }
+  .become-container .become-mentor-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 10rem; }
+    .become-container .become-mentor-flex .box1 {
+      width: 45%;
+      height: auto; }
+      .become-container .become-mentor-flex .box1 h2 {
+        font-size: 2.5rem; }
+      .become-container .become-mentor-flex .box1 p {
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem; }
+      .become-container .become-mentor-flex .box1 .icons {
+        width: 26%; }
+        .become-container .become-mentor-flex .box1 .icons img {
+          width: 100%;
+          height: auto; }
+  .partner-logos {
+    width: 90%;
+    margin: 0 auto; }
+    .partner-logos h2 {
+      font-size: 3rem;
+      padding-top: 4rem; }
+    .partner-logos .blueline {
+      height: 1vh;
+      width: 10%;
+      margin: 2rem auto; }
+    .partner-logos .logo_showcase {
+      margin-bottom: 8rem !important; }
+      .partner-logos .logo_showcase .slick-slide {
+        height: 30%;
+        padding: 2rem 1rem; }
+        .partner-logos .logo_showcase .slick-slide img {
+          height: 170px; } }
+
+#program-learning {
+  background: #f9f9f9;
+  width: 100%; }
+
+.flourish {
+  background: #22DFE6;
+  height: 1vh;
+  width: 8vh; }
+
+.card-front {
+  background-color: fff;
+  drop-shadow: 1em;
+  z-index: 2;
+  text-align: center; }
+
 /*# sourceMappingURL=foundation.css.map */
