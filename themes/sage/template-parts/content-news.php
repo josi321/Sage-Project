@@ -8,6 +8,7 @@
  * @since FoundationPress 1.0.0
  */
 
+
 ?>
 <?php 
 $color =  get_field("label");
@@ -17,36 +18,44 @@ if(is_single()) { ?>
 
 
 
-<article class="SingleEntrepeneur" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="single" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<header class="entry-header" style="background:url(<?php the_post_thumbnail_url("large") ?> )center !important ; background-size:cover !important;"">
+	<div class="flexSingle">
 	<div id="trapezoide" class="hide-for-small-only" style="background:<?php echo $color ?>" >
-		<div class="labelTitle">
+		<div class="labelFlex">
+		
 		<?php 
 		$test =	get_field('date');
 		$test = DateTime::createFromFormat("dmY",$test);
-		echo "<div class='date date-events' style='color:$color'><h2>".$test->format("d")."</h2>";
+		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
 		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
-			?>
-		<div>	
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<?php the_excerpt()  ?>
-		</div>
+		?>
+			<div class="labelTitle">
+				<h1><?php the_title() ?></h1>
+				<?php the_excerpt()  ?>
+			</div>	
 		</div>
 	</div>
 	<div id="triangle-bottomleft" class="hide-for-small-only" style="background: linear-gradient(to right top, <?php echo $color ?> 50%, transparent 50%);"></div>
+	</div>
 	</header>
 		<div id="trapezoid" class="show-for-small-only" style="background:<?php echo $color ?>">
-			<div class="labelTitle">
-			<?php 
+		<div class="labelFlex">
+		
+		<?php 
 		$test =	get_field('date');
 		$test = DateTime::createFromFormat("dmY",$test);
-		echo "<div class='date date-events' style='color:$color'><h2>".$test->format("d")."</h2>";
+		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
 		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
-			?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		?>
+			<div>
+				<h1><?php the_title() ?></h1>
+				
+			</div>	
 		</div>
 		<?php the_excerpt()  ?>
+		</div>
 		</div>	
 		<div id="triangle-up-left" class="show-for-small-only" style="background: linear-gradient(to right bottom, <?php echo $color ?> 50%, transparent 50%);"></div>
 
@@ -55,7 +64,13 @@ if(is_single()) { ?>
 
 		<div class="box">
 			<div class="entry-content">
-					<?php the_content(); ?>
+
+					<h2><?php the_field('content_title') ?></h2>
+				<?php	the_content(); ?>
+			</div>
+			<div class="sideright hide-for-small-only">
+				<?php get_sidebar(); ?>
+
 			</div>
 		
 		</div>
@@ -64,20 +79,18 @@ if(is_single()) { ?>
 		<?php		}else{ ?>
 
 		
-<div class="small-12 medium-6 large-4 columns  entrepeneur" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> style="background:url(<?php the_post_thumbnail_url("large") ?> )top right no-repeat !important ; background-size:cover !important;"">
-	
-	<div id="triangle-bottomleft" style="background: linear-gradient(to right top, <?php echo $color 
-		?> 50%, transparent 50%);">
-	
-	<?php 
+<div class="small-12 medium-6 large-4 columns  entrepeneur" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> style="background:<?php echo $color ?>" >
+	<div class="img" style="background:url(<?php the_post_thumbnail_url("medium") ?> )no-repeat!important ; background-size:cover  !important;" ></div>
 
+	<div id="triangle-bottomleft" style="background: linear-gradient(to right top, <?php echo $color ?> 50%, transparent 50%);"></div>
+
+	<div id="trapezoid" style="background:<?php echo $color ?>">
+		<?php 
 		$test =	get_field('date');
 		$test = DateTime::createFromFormat("dmY",$test);
-		echo "<div class='date ' style='color:$color'><h2>".$test->format("d")."</h2>";
-		echo "<p>".$test->format("M") .$test->format("Y")."</p></div>";	
+		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
+		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
 	?>
-	</div>
-	<div id="trapezoid"  style="background:<?php echo $color ?>">
 		<h1><?php the_title() ?></h1>
 		<?php the_excerpt()  ?>
 		<a href="<?php echo get_permalink( $post->ID ); ?>">

@@ -1,0 +1,335 @@
+///single archive
+.SingleEntrepeneur{
+        img{
+            width: 100%;
+        }
+        header{
+            height:30vh;
+        }
+        #trapezoide {
+            color: white;
+            height: 20vh;
+            width: 100%;
+            .labelTitle{
+                display: flex;
+            }
+
+            p{
+                margin-top: -1vh;
+                font-size: 1rem;
+                margin-left: 1vh;
+                margin-right: 1vh;
+                font-weight: 400;
+                
+            }
+            h2{
+                font-size: 2rem;  
+            }
+            h1{
+                margin:1vh;
+                font-size: 2rem;
+            }
+            .date{
+            text-align: center;
+            width: 15%;
+            height:65%;
+            margin-left:6vh;
+            margin-top: 2vh;
+            // color:#Fc0;
+            background-color: white;
+            p{
+                margin:0;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+            }
+            h1{
+               margin:0;
+            }
+            
+        }
+        }
+        #trapezoid {
+            // display: flex;
+            color: white;
+            height: 25vh;
+            width: 100%;
+            .labelTitle{
+                display: flex;
+            }
+
+            p{
+                margin-top: -2vh;
+                font-size: 1.25rem;
+                margin-left: 4vh;
+                margin-right: 4vh;
+                font-weight: 300;
+                
+            }
+            h2{
+                font-size: 2rem;  
+                margin-top: 1vh;
+            }
+            h1{
+                padding:4vh;
+                font-size: 2.25rem;
+            }
+            .date{
+            text-align: center;
+            width: 25%;
+            height:50%;
+            margin-left:4vh;
+            margin-top: 3vh;
+            // color:#Fc0;
+            background-color: white;
+            p{
+                margin:0;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+            }
+            h1{
+               margin:0;
+            }
+            
+        }
+        } 
+        #triangle-up-left {
+            width: 100%;
+            height: 15%;
+            left: 0px;
+            top: 0px;
+            color:white;
+            p{
+                margin-left: 4vh;
+                font-size: 1.25rem;
+            }
+        }  
+        .entry-content{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
+}
+
+.container{
+    padding:0;
+    width: 100%;
+}
+
+//Multi-archive
+
+#page{
+  .main-content{
+  width: 100% !important;
+  margin:0 auto;
+  float: none !important;
+    .entrepeneur {
+        color:white;
+    	height:60vh;
+    	border:15px solid white;
+    	display: flex;	
+    	flex-direction: column;
+    	justify-content: flex-end;
+    	padding: 0;
+        a{
+            color: white;
+            margin-left:2vh;
+        }
+        h1{
+            font-weight: 600;
+        }
+        h1,p{
+            margin:0 2vh;
+        }
+        .date{
+            text-align: center;
+            width: 23%;
+            height:55%;
+            margin-left:2vh;
+            margin-top: 8vh;
+            color:#Fc0;
+            background-color: white;
+            p,h1{
+                margin:0;
+            }
+            h2{
+                font-size: 2.5rem;
+                margin-bottom: 0;
+
+            }
+            
+        }
+    }
+    #trapezoid {
+    	align-self: flex-end;
+        height: 20vh;
+        width: 100%;
+
+    }
+    #triangle-bottomleft {
+        width: 100%;
+        height: 40%;
+        left: 0px;
+        top: 0px;
+    }
+}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:1050px){
+    .entrepeneur{
+        height:40vh !important; 
+         h1{
+                font-size: 2rem;
+            }
+        .date{
+            margin-top: 6vh !important;
+            p{
+                margin:0;
+            }
+
+        }
+        } 
+
+    .SingleEntrepeneur{
+        .entry-header{
+            display: flex;  
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 0;
+         }
+        #trapezoide {
+            align-self: flex-end;
+            height: 11vh;
+            width: 60%;
+        }
+        #triangle-bottomleft {
+            align-self: flex-end;
+            width: 5%;
+            height: 11vh;
+        }
+        
+    }
+    #trapezoid {
+        height: 15vh !important;
+        }
+}
+@media only screen and (min-width: 1024px) and (max-width:1050px){
+     
+     .date{
+            width: 30% !important;
+            height:50%;
+            p{
+                font-size: 1rem !important;
+            }
+            h1{
+                font-size: 3.5rem !important;
+            }  
+        }
+        .date-events{
+            width:25% !important;
+        }
+
+}
+
+@media only screen and (min-width: 1050px){
+    
+    .entrepeneur{
+        height:60vh !important;
+    .date{
+            width: 20% !important;
+            height:55% !important;
+            p{
+                font-size: 1rem !important;
+            }
+            h1{
+                font-size: 3.5rem !important;
+            }  
+        }
+        .date-news{
+            width:25% !important;
+            height:60% !important;
+            margin-top: 10vh !important;
+        }
+        
+        #triangle-bottomleft{
+            .date{
+                height:45% !important;
+            }
+        }
+        .date-events{
+            width:15% !important;
+            height:40% !important;
+        }
+        .date-news{
+            width:25% !important;
+            height:60% !important;
+            margin-top: 10vh !important;
+        }
+    }
+
+    .SingleEntrepeneur{
+
+        header{
+            height:60vh;
+        }
+        .entry-header{
+            display: flex;  
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 0;
+         }
+        #trapezoide {
+
+            align-self: flex-end;
+            justify-content: flex-end;
+            height: 22vh;
+            width: 50%;
+            .labelTitle{
+                align-self:flex-end;
+            }
+            h1{
+                margin-top: 6vh;
+                font-size: 2.5rem;
+            }
+            p{
+                    font-size: 1.5rem;
+                }
+            .date{
+                width: 10%;
+                height:40%;
+                 margin-left:6vh;
+                 margin-top: 2vh;
+                h2{
+                    font-size: 2.25rem;
+                    margin-bottom: 0;
+                }
+
+            }
+            .date-events{
+                margin-left: 18vh;
+                margin-top: 8vh;
+                height:45%;
+                width:11%;
+                p{
+                    font-size: 0.75rem;
+                }
+
+            }
+            .labelTitleEntrepeneur{
+                margin-left: 18vh;
+            }
+
+
+        }
+        #triangle-bottomleft {
+            align-self: flex-end;
+            width: 5%;
+            height: 22vh;
+            overflow: hidden;
+        }
+    }
+    .events{
+        height:70vh !important;
+    }
+}
