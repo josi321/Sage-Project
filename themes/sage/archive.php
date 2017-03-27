@@ -18,8 +18,14 @@ archive
 
 get_header(); ?>
 
+<?php if( get_post_type() == 'events' ) {
+   $class = "archive-container-events";
+} else {
+   $class = "archive-container";
+} ?>
+
 <div id="page" role="main">
-	<article class="main-content ">
+	<article class="<?php echo $class ?>">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -48,8 +54,8 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
-	<?php get_sidebar(); ?>
-
+<!-- 	<?php get_sidebar(); ?>
+ -->
 </div>
 
 <?php get_footer();
