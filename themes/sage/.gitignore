@@ -2,9 +2,5 @@
 *.sass-cache*
 *.log
 node_modules/
-<<<<<<< HEAD
-
-=======
->>>>>>> Miquelllabres/master
 packaged/
 wpcs/
