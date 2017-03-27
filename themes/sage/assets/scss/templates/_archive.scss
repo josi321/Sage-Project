@@ -1,0 +1,86 @@
+.archive-container-events{width: 70%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
+.archive-container{width: 80%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
+.entrepeneur{ padding: 0; border: 5px solid white;box-sizing: border-box;
+    #trapezoid{ padding:10px;color: white;
+        p{margin-bottom:0;}
+        h1{font-size:2rem;}
+    }
+    #triangle-bottomleft{ margin-top:-90px;  height:90px;}
+    h1{padding-top:15px;}
+    .date{margin-top: -65px; margin-bottom: 10px; position:absolute; text-align: center; background-color: white;  
+        p{margin:0 !important;padding:0 5px;}
+        h2{font-size:2rem;}
+    }
+    .img{min-height:35vh;}
+    }
+
+.single{
+    .box{display:flex;justify-content:space-around; color:dimgrey;}
+    p{margin-bottom:0;}
+    
+    .entry-header{   min-height: 25vh; display: flex; justify-content: flex-start; align-items: flex-end;
+
+        .flexSingle{display:flex; width:65%;}
+        .img{
+            img{position: absolute;}
+        }
+      #trapezoide{color:white; width:100%; max-height:120px;
+
+                .date{margin:20px; text-align: center; background-color: white;  max-height: 120px;
+                    p{margin:0 !important;padding:0 5px;}
+                    h2{font-size:4vw;}
+                }
+                .labelFlex{display:flex; padding-left: 9vw; margin-top: 10px;
+                    .labelTitle{padding-left:10px;
+                    h1{font-size:3.8vw;  padding-top: 15px;}
+                    p{font-size: 2.2vw;}
+                    }
+                }
+         }   
+     #triangle-bottomleft{  position:relative; width: 50px; }  
+ }
+    .entry-content{width:80%; margin:0 auto;
+    }
+    #trapezoid{  padding:10px; color: white;
+            .labelFlex{display:flex;
+                    h1{font-size:2.5rem;}
+            }
+            .entry-title{font-size:3.5vw; padding-top: 30px; padding-left: 30px;}
+            .date{ margin: 10px; text-align: center; background-color: white;  max-height: 80px; min-width:80px;
+        p{margin:0 !important; font-size:1rem;padding:0;}
+        h2{font-size:2rem;}
+    }
+            p{font-size:1.5rem; padding-left: 10px;}
+    }
+    #triangle-up-left{height:70px;}
+}
+
+@media only screen and (min-width: 638px){
+.single{
+    .box{margin-top:20px;
+        .sideright{width:30%;}
+        .sidebar{width:100% !important; justify-content:center; padding-top:40px; margin:0 auto !important;}
+        .entry-content{ width:50% !important; margin-left:10vw;
+            h2{margin-bottom:0; margin:20px 0 ;}
+        }
+    }
+ }
+.img{min-height:25vh !important;}
+.entry-header{min-height:300px !important;
+    #trapezoide{min-height:150px;}
+}
+}
+@media only screen and (min-width:1050px){
+
+ .archive-container{width:90%;}  
+ .entry-header{min-height:500px !important;
+    #trapezoide{min-height:170px;
+        .date{min-width:100px;}
+        .labelTitle{
+            h1{ padding-top: 5px !important;}
+        }
+    }  
+    }
+ } 
+
+

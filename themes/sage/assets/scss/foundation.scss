@@ -79,6 +79,8 @@
 @import "modules/footer";
 @import "modules/sidebar";
 @import "modules/editor-style";
+@import "modules/banners-styles";
+
 
 // Components
 @import "components/buttons";
@@ -88,6 +90,7 @@
 @import "components/links";
 
 // Templates
+@import "templates/archive";
 @import "templates/front";
 @import "templates/kitchen-sink";
 @import "templates/page-default";
@@ -95,8 +98,10 @@
 @import "templates/page-full-width";
 @import "templates/single-post";
 
+
 //About page
 @import "templates/page-about";
 
 //Become a mentor or partner page
 @import "templates/page-become-mentor";
+@import "templates/program";
