@@ -220,10 +220,10 @@
 <tr>
 <th scope="row">FAQ Expand/Collapse All</th>
 <td>
-	<fieldset><legend class="screen-reader-text"><span>FAQ Toggle</span></legend>
+	<fieldset><legend class="screen-reader-text"><span>FAQ Expand/Collapse All</span></legend>
 	<label title='Yes'><input type='radio' name='expand_collapse_all' value='Yes' <?php if($Expand_Collapse_All == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='expand_collapse_all' value='No' <?php if($Expand_Collapse_All == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQs hide/open when they are clicked? </p>
+	<p>Should there be a control to open and close all FAQs simultaneously?</p>
 	</fieldset>
 </td>
 </tr>
@@ -280,7 +280,7 @@
 	<fieldset><legend class="screen-reader-text"><span>Display Post Author</span></legend>
 	<label title='Yes'><input type='radio' name='display_author' value='Yes' <?php if($Display_Author == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='display_author' value='No' <?php if($Display_Author == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the display name of the post's author be show beneath the FAQ title?</p>
+	<p>Should the display name of the post's author be displayed beneath the FAQ title?</p>
 	</fieldset>
 </td>
 </tr>
@@ -290,7 +290,7 @@
 	<fieldset><legend class="screen-reader-text"><span>Display Post Date</span></legend>
 	<label title='Yes'><input type='radio' name='display_date' value='Yes' <?php if($Display_Date == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='display_date' value='No' <?php if($Display_Date == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the date the post was created be show beneath the FAQ title?</p>
+	<p>Should the date the post was created be displayed beneath the FAQ title?</p>
 	</fieldset>
 </td>
 </tr>
@@ -395,7 +395,7 @@
 	<fieldset><legend class="screen-reader-text"><span>FAQ Auto Complete Titles</span></legend>
 	<label title='Yes'><input type='radio' name='faq_auto_complete_titles' value='Yes' <?php if($FAQ_Auto_Complete_Titles == "Yes") {echo "checked='checked'";} ?> /> <span>Yes</span></label><br />
 	<label title='No'><input type='radio' name='faq_auto_complete_titles' value='No' <?php if($FAQ_Auto_Complete_Titles == "No") {echo "checked='checked'";} ?> /> <span>No</span></label><br />
-	<p>Should the FAQ Titles auto complete? </p>
+	<p>Should the FAQ Titles auto complete when using the FAQ search shortcode?</p>
 	</fieldset>
 </td>
 </tr>
