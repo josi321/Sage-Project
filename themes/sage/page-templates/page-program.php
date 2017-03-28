@@ -14,29 +14,32 @@ get_header();?>
 <!-- LEARNING SECTION-->
 
 <div id="program-learning" >
-	<h2 class="small-centered small-12"><?php the_field('learning_heading');?></h2>
-	<div class="card-wrap card-section flip-container" ontouchstart="this.classList.toggle('hover');">
-		<div class="flipper row">
-			<?php for($i=1; $i < 5; $i++) { ?>
-					<div class="card front columns large-3 medium-6 small-12">
-						<img src="<?php the_field('card_'.$i.'_icon');?>">
-						<p><?php the_field('card_'.$i.'_front_text'); ?></p>
-					</div>
-					<div class="card back columns large-3 medium-6 small-12">
-						<p><?php the_field('card_'.$i.'_back'); ?></p>
-					</div> 
-			<?php } ?>
-		</div>
-	</div>		
+	<h2 class=""><?php the_field('learning_heading');?></h2>
+	<!-- FLIP CARDS-->
+		<?php for($i=1; $i < 5; $i++) { ?>
+		<div class="flip-container card-shadow" ontouchstart="this.classList.toggle('hover');">
+  			<div class=" flipper">
+  				<!-- Front of Card -->
+	    		<div class="front">
+	    			<img src="<?php the_field('card_'.$i.'_icon');?>">
+	      			<p><?php the_field('card_'.$i.'_front_text'); ?></p>
+	    		</div>
+	    		<!-- Back of Card -->
+	    		<div class="back">
+	      			<p><?php the_field('card_'.$i.'_back'); ?></p>
+	    		</div>
+  			</div>
+  		</div>
+		<?php } ?>	
 </div>
 <!-- CALL TO ACTION SECTION-->
 <div id="program-cta">
-	<h2 class="cta-lead small-12 column"><?php the_field('cta_heading'); ?></h2>
+	<h2 class="cta-lead"><?php the_field('cta_heading'); ?></h2>
 	<div class="flourish small-centered">
 	</div>
-	<div class="container row small-4">
-		<p class="column"><?php the_field('cta_text_block_1');?><p>
-		<p class="column"><?php the_field('cta_text_block_2');?><p>
+	<div class="container row">
+		<p class="column"><?php the_field('cta_text_block_1');?></p>
+		<p class="column"><?php the_field('cta_text_block_2');?></p>
 	</div>
 <div id="program-timeline">
 	<h2> <?php the_field('timeline_heading');?></h2>

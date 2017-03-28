@@ -1,6 +1,12 @@
 #program-learning{
 	background: #f9f9f9;
 	width: 100%;
+	position: relative;
+	min-height: 60vh;
+}
+
+#program-cta{
+	background:#fff;
 }
 
 .flourish{
@@ -21,14 +27,24 @@ h2{
 	line-height: 300%;
 }
 
+.card-shadow{
+	-webkit-box-shadow: 7px 7px 18px 0px rgba(50, 50, 50, 0.16);
+	-moz-box-shadow:    7px 7px 18px 0px rgba(50, 50, 50, 0.16);
+	box-shadow:         7px 7px 18px 0px rgba(50, 50, 50, 0.16);
+}
+
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
   perspective: 1000;
-}
+  width: 20%;
+  height: 20vh;
+  margin: 2%;
+  position: absolute;
+  }
 
-	.flip-container:hover .flipper,  
+.flip-container:hover .flipper,  
   .flip-container.hover .flipper {
 		-webkit-transform: rotateY(180deg);
 		-moz-transform: rotateY(180deg);
@@ -37,19 +53,17 @@ h2{
 	}
 
 .flipper {
-	-webkit-transition: 0.6s;
+	-webkit-transition: 0.2s;
 	-webkit-transform-style: preserve-3d;
 
-	-moz-transition: 0.6s;
+	-moz-transition: 0.2s;
 	-moz-transform-style: preserve-3d;
   
-  -o-transition: 0.6s;
+  -o-transition: 0.2s;
 	-o-transform-style: preserve-3d;
 
-	transition: 0.6s;
+	transition: 0.2s;
 	transform-style: preserve-3d;
-
-	position: relative;
 }
 
 .front, .back {
@@ -57,34 +71,25 @@ h2{
 	-moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
 	backface-visibility: hidden;
+	background: #fff;
+	text-align: center;
+	z-index: 2;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #fff;
-	text-align: center;
-}
-
-.front {
-	z-index: 2;
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-  	-o-transform: rotate(-20deg);
-	transform: rotate(-20deg);
+	//height: 15vh;
+	width: 100%;
 }
 
 .back {
-	//-webkit-transform: rotateY(180deg);
-	//-moz-transform: rotateY(180deg);
-  //-o-transform: rotateY(180deg);
-	//transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .back p {
 	position: absolute;
 	bottom: 1vh;
 	color: #696969;
-	left: 0;
-	right: 0;
-	text-align: center;
-	padding: 2vh;
 }
