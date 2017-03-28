@@ -3,7 +3,7 @@
 im in the become a mentor or partner page!
 
 <?php get_header(); ?>
-<!-- <?php get_template_part( 'template-parts/content', 'upper-banner' );?> -->
+<?php get_template_part( 'template-parts/upper-banner' );?>
 
 
 <div class="become-container">
@@ -38,6 +38,9 @@ im in the become a mentor or partner page!
       </p>
     </div>
   </div>
+  <div class="blue-btn">
+    <a href="<?php the_permalink(); ?>">Get in touch > </a>
+  </div>
 </div>
 
 <div class="partner-logos">
@@ -47,7 +50,7 @@ im in the become a mentor or partner page!
 </div>
 
 <!--  LOWER BANNER-->
-<!-- <?php get_template_part( 'template-parts/content', 'lower-banner' );?> -->
+<?php echo get_template_part( 'template-parts/lower-banner' );?>
 
 <div class="subscribe">
   <h3>Join our Newsletter</h3>

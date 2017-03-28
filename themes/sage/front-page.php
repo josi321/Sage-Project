@@ -9,11 +9,6 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-$obj = new event_call();
-
-$obj->event_auth();
-$obj->get_events_data();
-
 get_header(); ?>
  <?php get_template_part( 'template-parts/upper-banner' ); ?>
 <div id="page" role="main">
@@ -45,7 +40,9 @@ get_header(); ?>
 	</article>
 
 </div>
+
 <?php get_template_part( 'template-parts/lower-banner' ); ?>
 
 
 <?php get_footer();
+?>
