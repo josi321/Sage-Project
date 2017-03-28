@@ -9,6 +9,7 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
+
 get_header(); ?>
  <?php get_template_part( 'template-parts/upper-banner' ); ?>
 <div id="page" role="main">
@@ -45,4 +46,6 @@ get_header(); ?>
 
 
 <?php get_footer();
+
 ?>
+
