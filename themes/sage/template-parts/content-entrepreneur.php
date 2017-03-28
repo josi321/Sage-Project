@@ -70,4 +70,6 @@ if(is_single()) { ?>
 	
 	
 </div>
+
+
 <?php } ?>

@@ -41,7 +41,11 @@ get_header(); ?>
 	</article>
 
 </div>
+
 <?php get_template_part( 'template-parts/lower-banner' ); ?>
 
 
 <?php get_footer();
+
+?>
+

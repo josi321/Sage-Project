@@ -38,7 +38,9 @@ function products_init($category) {
 
 function create_post_categories(){
 
-	$post_categories = array("events","entrepeneur","news","timeline");
+
+$post_categories = array("events","entrepeneur","news","timeline");
+
 
 	foreach ($post_categories as $post_category) {
 		$post_args = products_init($post_category);
