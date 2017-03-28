@@ -1,0 +1,158 @@
+.become-container{
+  background-color: #FAFAFA;
+  /*background-color: blue; so i can see */
+  padding-bottom: 4rem;
+  .subtitle{
+    text-align:center;
+    width:83%;
+    color: #696969;
+    font-size:1.5rem;
+    margin:0 auto;
+    padding:1rem 0;
+  }
+  .become-mentor-flex{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    .box1{
+      background-color:white;
+      margin:1rem 0;
+      width:70%;
+      height:auto;
+      box-shadow:0px 10px 30px #ccc;
+      h2{
+        background-color:#F4003C;
+        color:white;
+        text-align:center;
+        padding:1rem;
+        font-size:1.75rem;
+      }
+      .icons{
+        display: block;
+        margin: auto;
+        width: 40%;
+      }
+      p{
+        color:grey;
+        font-size:1rem;
+        text-align:center;
+        padding:0 1rem;
+      }
+    }
+  }
+}
+
+.partner-logos{
+  h2{
+    color: #F4003C;
+    margin: 0 auto;
+    font-size:2rem !important;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:1rem;
+  }
+  .blueline {
+    background-color:#00e5ee;
+    height:1vh;
+    width:15%;
+    border-radius: 15%;
+    margin:1rem auto 0 auto;
+  }
+}
+
+.logo_showcase{
+  margin-bottom:2rem !important;
+  .slick-slide{
+    height:35%;
+    padding:2rem 1rem;
+    img{
+      width:100%;
+      height:170px;
+    }
+  }
+}
+
+
+.subscribe{
+  background-color: #FAFAFA;
+  margin:0 auto;
+  text-align:center;
+  padding:3rem 0;
+  h3{
+    color:#F4003C;
+    font-size:2rem;
+  }
+  h4{
+    color: #696969;
+    font-size:1.5rem;
+    padding:0 0.5rem;
+  }
+  .subscribe-email {
+    display: inline-block;
+    .email-btn{
+      background-color:red;
+      padding:1rem 3rem;
+      color:white;
+      font-size:1rem;
+    }
+  }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 768px){
+  .become-container .subtitle {
+      width: 82%;
+      font-size: 2.4rem;
+      padding: 2.5rem 0;
+  }
+  .become-container .become-mentor-flex{
+    flex-direction:row;
+    padding:0 10rem;
+    .box1{
+      width:45%;
+      height:auto;
+      h2{
+        font-size: 2.5rem;
+      }
+      p{
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem;
+      }
+      .icons{
+        width:26%;
+        img{
+          width:100%;
+          height:auto;
+        }
+      }
+    }
+
+  }
+  .partner-logos{
+    width:90%;
+    margin:0 auto;
+  h2{
+    font-size:3rem;
+    padding-top:4rem;
+  }
+  .blueline {
+      height: 1vh;
+      width: 10%;
+      margin: 2rem auto;
+  }
+  .logo_showcase{
+    margin-bottom:8rem !important;
+    .slick-slide{
+      height:30%;
+      padding:2rem 1rem;
+      img{
+        height:170px;
+      }
+    }
+  }
+  }
+
+}

@@ -15,6 +15,8 @@ apply.php
 
  <?php get_template_part( 'template-parts/upper-banner' ); ?>
 
+
+
  <?php get_template_part( 'template-parts/lower-banner' ); ?>
 
 
