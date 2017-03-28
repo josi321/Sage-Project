@@ -58,13 +58,14 @@ For more information about WooCommerce integration, please see the following vid
 * Microdata question schema, to help with SEO
 * Responsive FAQ design
 * Group FAQs by category for easy FAQ navigation
+* Pre-built shortcodes directly on edit FAQ page to easily display a specific FAQ anywhere on your site
 
 This FAQ plugin is great for combining with our <a href='https://wordpress.org/plugins/front-end-only-users/'>user management plugin </a> to create a member's only FAQ area.
 
 Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ post type, allowing for smart and easy FAQ integration.
 
 = Premium FAQ features include =
-* Choose from 15 toggle icon sets
+* Choose from 15 toggle icon sets from our custom designed FAQ icon font set
 * WooCommerce FAQ tab with specific FAQs for each product on product page (<a href='https://www.youtube.com/watch?v=cH3p0fW4c5o'>YouTube Video</a>)
 * Different FAQ display styles for your frequently asked questions
 * Share FAQs on social media
@@ -72,12 +73,14 @@ Ultimate FAQ uses the WordPress custom post type functionality to create an FAQ 
 * Admin notification on FAQ submission
 * AJAX easy FAQ search with autocomplete for FAQ titles
 * Add additional custom fields to your FAQ answer, such as a text area, file, link, date and more
+* Optional FAQ ratings that let visitors up- or down-vote specific FAQs
 * Import/Export of FAQs from spreadsheet
 * Export FAQs to PDF
 * SEO-Friendly FAQ, FAQ category and FAQ tag permalinks
 * Advanced FAQ styling options
 * Drag and drop precise re-ordering of FAQs
 * Change the FAQ permalink slug base
+* Labelling options to change the wording/translate specific labels in the plugin
 
 = FAQ Shortcodes =
 * [ultimate-faqs]: display all FAQs, or only specific FAQ categories using include_category and exclude_category attributes (both take a comma-separated list of category slugs)
@@ -247,9 +250,6 @@ Video 3 - FAQs Ordering
 13. View of FAQ custom fields in the admin
 
 == Changelog ==
-= 1.5.29 =
-- Fixed an error where a number of widget titles weren't displaying correctly in the admin area
-
 = 1.5.28 =
 - Updated some PHPExcel files for increased import/export compatibility with PHP7
 
