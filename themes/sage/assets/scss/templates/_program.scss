@@ -1,15 +1,10 @@
 #program-learning{
-	display:flex;
 	background: #f9f9f9;
 	width: 100%;
 	position: relative;
 	min-height: 60vh;
 }
-.ProgramTittle{
-	text-align:center;
-	background: #f9f9f9;
-	h2{color: #E0394E;}
-}
+
 #program-cta{
 	background:#fff;
 	p{
@@ -47,7 +42,7 @@ h2{
   width: 20%;
   height: 20vh;
   margin: 2%;
-  // position: absolute;
+  position: absolute;
   }
 
 .flip-container:hover .flipper,  
@@ -70,10 +65,9 @@ h2{
 
 	transition: 0.2s;
 	transform-style: preserve-3d;
-	position: relative;
 }
 
-.front {
+.front, .back {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -84,27 +78,10 @@ h2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 20vh;
-	width: 100%;
-	img{
-		padding-top: 25px;
-		margin-bottom: 25px;
-	}
-}
-.back {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-	backface-visibility: hidden;
-	background: #fff;
-	text-align: center;
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 20vh;
+	//height: 15vh;
 	width: 100%;
 }
+
 .back {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
@@ -113,6 +90,7 @@ h2{
 }
 
 .back p {
-	padding-top:50px;
+	position: absolute;
+	bottom: 1vh;
 	color: #696969;
 }

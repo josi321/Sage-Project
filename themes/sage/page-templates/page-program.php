@@ -12,7 +12,7 @@ get_header();?>
  <?php get_template_part( 'template-parts/upper-banner' ); ?>
 
 <!-- LEARNING SECTION-->
-<div class="ProgramTittle"><h2 class=""><?php the_field('learning_heading');?></h2></div>
+<h2 class=""><?php the_field('learning_heading');?></h2>
 <div id="program-learning" >
 	
 	<!-- FLIP CARDS-->
