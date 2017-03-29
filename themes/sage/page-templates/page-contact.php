@@ -7,11 +7,10 @@ get_header();?>
 <?php get_template_part( 'template-parts/upper-banner' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-<<<<<<< HEAD
+
 <div class="contactTitle"><h2><?php the_field( 'contact_page_heading' ); ?></h2></div>
-=======
-<h2><?php the_field( 'contact_page_heading' ); ?></h2>
->>>>>>> origin/master
+
+
 <div class="flourish small-centered">
 	</div>
 

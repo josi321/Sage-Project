@@ -77,12 +77,12 @@ if(is_single()) { ?>
 	<div id="triangle-bottomleft" style="background: linear-gradient(to right top, <?php echo $color ?> 50%, transparent 50%);"></div>
 
 	<div id="trapezoid" style="background:<?php echo $color ?>">
-	<!-- 	<?php 
+		<?php 
 		$test =	get_field('date');
 		$test = DateTime::createFromFormat("dmY",$test);
 		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
 		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
-	?> -->
+	?> 
 		<h1><?php the_title() ?></h1>
 		<?php the_excerpt()  ?>
 		<a href="<?php echo get_permalink( $post->ID ); ?>">
