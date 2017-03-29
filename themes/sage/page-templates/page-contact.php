@@ -15,7 +15,7 @@ get_header();?>
 	</div>
 
 <!--FORM-->
-<div class="contact-form small-5 small-centered"><?php echo do_shortcode(get_field("form_shortcode")) ?> </div>
+<div class="contact-form small-10 large-5 small-centered"><?php echo do_shortcode(get_field("form_shortcode")) ?> </div>
 
 <!-- LOWER BANNER-->
 <?php get_template_part( 'template-parts/lower-banner' ); ?>

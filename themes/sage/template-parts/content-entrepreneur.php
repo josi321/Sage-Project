@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The default template for displaying content
@@ -43,6 +44,7 @@ if(is_single()) { ?>
 
 		<div class="box">
 			<div class="entry-content">
+			<h2><?php the_field('content_title') ?></h2>
 					<?php the_content(); ?>
 			</div>
 		

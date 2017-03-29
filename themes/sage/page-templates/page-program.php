@@ -17,7 +17,7 @@ get_header();?>
 	
 	<!-- FLIP CARDS-->
 		<?php for($i=1; $i < 5; $i++) { ?>
-		<div class="flip-container card-shadow" ontouchstart="this.classList.toggle('hover');">
+		<div class="flip-container card-shadow small-12 medium-3 large-3" ontouchstart="this.classList.toggle('hover');">
   			<div class=" flipper">
   				<!-- Front of Card -->
 	    		<div class="front">
@@ -37,9 +37,9 @@ get_header();?>
 	<h2 class="cta-lead"><?php the_field('cta_heading'); ?></h2>
 	<div class="flourish small-centered">
 	</div>
-	<div class="container row">
-		<p class="column"><?php the_field('cta_text_block_1');?></p>
-		<p class="column"><?php the_field('cta_text_block_2');?></p>
+	<div class="containerprogram row">
+		<p class="columna"><?php the_field('cta_text_block_1');?></p>
+		<p class="columna"><?php the_field('cta_text_block_2');?></p>
 	</div>
 <div id="program-timeline">
 	<h2> <?php the_field('timeline_heading');?></h2>
