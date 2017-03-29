@@ -7171,7 +7171,9 @@ body#tinymce {
 
 @media all and (max-width: 1050px) and (min-width: 640px) {
   .upper-banner {
-    height: 40vh; }
+    height: 40vh;
+    -webkit-background-size: cover !important;
+            background-size: cover !important; }
   .upper-banner-sqaure {
     width: 35%; }
   .upper-banner-triangle {
@@ -7297,7 +7299,7 @@ label {
   font-size: 1.5rem; }
 
 input[type="submit"] {
-  background-color: #E0394E;
+  background-color: #F04;
   color: #fff;
   font-size: 1.24rem;
   font-weight: 600;
@@ -7312,7 +7314,7 @@ input[type="submit"] {
   text-align: center; }
   .contactTitle h2 {
     font-weight: bold;
-    color: #E0394E;
+    color: #F04;
     margin: 40px 0; }
 
 .sites-button {
@@ -7490,7 +7492,7 @@ input[type="submit"] {
 
 .single .entry-content {
   width: 80%;
-  margin: 0 auto; }
+  margin: 40px auto; }
 
 .single #trapezoid {
   padding: 10px;
@@ -8137,7 +8139,7 @@ input[type="submit"] {
   margin: 0 auto 1rem auto; }
 
 .about-container h1 {
-  color: red;
+  color: #F04;
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
@@ -8441,17 +8443,29 @@ input[type="submit"] {
   background: #f9f9f9;
   width: 100%;
   position: relative;
-  min-height: 60vh; }
+  min-height: 30vh; }
 
 .ProgramTittle {
   text-align: center;
   background: #f9f9f9; }
   .ProgramTittle h2 {
-    color: #E0394E; }
+    color: #E0394E;
+    margin-bottom: 0; }
+
+.containerprogram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .containerprogram .columna {
+    width: 40%;
+    text-align: left !important; }
 
 #program-cta {
   background: #fff; }
   #program-cta p {
+    text-align: center;
     color: #696969; }
   #program-cta h2 {
     margin: 0 auto;
@@ -8473,7 +8487,6 @@ input[type="submit"] {
   -webkit-perspective: 1000;
   -o-perspective: 1000;
   perspective: 1000;
-  width: 20%;
   height: 20vh;
   margin: 2%; }
 
@@ -8527,5 +8540,22 @@ input[type="submit"] {
 .back p {
   padding-top: 50px;
   color: #696969; }
+
+@media only screen and (max-width: 640px) {
+  .containerprogram {
+    display: initial; }
+  #program-learning {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto; }
+  .back, .front {
+    height: 25vh; }
+  .flip-container {
+    width: 70%;
+    height: 25vh;
+    margin: 0 auto;
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=foundation.css.map */
