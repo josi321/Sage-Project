@@ -38,7 +38,9 @@ function products_init($category) {
 
 function create_post_categories(){
 
-	$post_categories = array("events","entrepeneur","news","timeline");
+
+$post_categories = array("events","entrepreneur","news","timeline","FAQ");
+
 
 	foreach ($post_categories as $post_category) {
 		$post_args = products_init($post_category);
@@ -91,7 +93,7 @@ function create_taxonomies($tax,$val) {
 
 function create_tax(){
 
-    $taxonomies= array("Category" => "events","Location" => "events",);
+    $taxonomies= array("Category" => "events","Location" => "events","Program" => "timeline","Apply" => "timeline",);
 
     foreach ($taxonomies as $tax_key => $tax_val) {
 

@@ -3,7 +3,12 @@
 .entrepeneur{ padding: 0; border: 5px solid white;box-sizing: border-box;
     #trapezoid{ padding:10px;color: white;
         p{margin-bottom:0;}
-        h1{font-size:2rem;}
+        h1{font-size:2.5rem;
+        font-weight: bold;}
+        p{font-size:1.2rem;
+            margin-bottom: 20px;} 
+        a{color:white;
+        }   
     }
     #triangle-bottomleft{ margin-top:-90px;  height:90px;}
     h1{padding-top:15px;}
@@ -32,20 +37,21 @@
                 }
                 .labelFlex{display:flex; padding-left: 9vw; margin-top: 10px;
                     .labelTitle{padding-left:10px;
-                    h1{font-size:3.8vw;  padding-top: 15px;}
+                    h1{font-size:4vw;  padding-top: 15px;}
                     p{font-size: 2.2vw;}
                     }
                 }
          }   
      #triangle-bottomleft{  position:relative; width: 50px; }  
  }
-    .entry-content{width:80%; margin:0 auto;
+    .entry-content{width:80%; margin:40px auto;
     }
     #trapezoid{  padding:10px; color: white;
             .labelFlex{display:flex;
                     h1{font-size:2.5rem;}
+                        
             }
-            .entry-title{font-size:3.5vw; padding-top: 30px; padding-left: 30px;}
+            .entry-title{font-size:10vw; padding-top: 30px; padding-left: 10px;}
             .date{ margin: 10px; text-align: center; background-color: white;  max-height: 80px; min-width:80px;
         p{margin:0 !important; font-size:1rem;padding:0;}
         h2{font-size:2rem;}
@@ -65,7 +71,7 @@
         }
     }
  }
-.img{min-height:25vh !important;}
+.img{min-height:30vh !important;}
 .entry-header{min-height:300px !important;
     #trapezoide{min-height:150px;}
 }
@@ -83,4 +89,16 @@
     }
  } 
 
+.homeFlex{
+    display: flex;
+    .flexcolumn{
+    display: flex;
+    flex-direction: column;
+     .size50{
+    height: 10vh;
+}
 
+}
+}
+
+   

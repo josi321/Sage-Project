@@ -1,3 +1,4 @@
+
 <?php
 /**
  *
@@ -62,6 +63,7 @@ if(is_single()) { ?>
 
 		<div class="box">
 			<div class="entry-content">
+			<h2><?php the_field('content_title') ?></h2>
 					<?php the_content(); ?>
 			</div>
 		
@@ -82,7 +84,7 @@ if(is_single()) { ?>
 		$test = DateTime::createFromFormat("dmY",$test);
 		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
 		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
-	?>
+	?> 
 		<h1><?php the_title() ?></h1>
 		<?php the_excerpt()  ?>
 		<a href="<?php echo get_permalink( $post->ID ); ?>">

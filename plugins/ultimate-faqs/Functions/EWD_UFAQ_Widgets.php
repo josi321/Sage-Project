@@ -32,7 +32,6 @@ class EWD_UFAQ_Display_FAQ_Post_List extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$faq_id = ! empty( $instance['faq_id'] ) ? $instance['faq_id'] : __( 'FAQ ID List', 'EWD_UFAQ' );
-		$faq_title = ! empty( $instance['faq_title'] ) ? $instance['faq_title'] : __( 'Widget Title', 'EWD_UFAQ' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'faq_id' ); ?>"><?php _e( 'FAQ ID List:', 'EWD_UFAQ' ); ?></label> 
@@ -94,7 +93,6 @@ class EWD_UFAQ_Display_Recent_FAQS extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$post_count = ! empty( $instance['post_count'] ) ? $instance['post_count'] : __( 'Number of FAQs', 'EWD_UFAQ' );
-		$faq_title = ! empty( $instance['faq_title'] ) ? $instance['faq_title'] : __( 'Widget Title', 'EWD_UFAQ' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'post_count' ); ?>"><?php _e( 'Number of FAQs:', 'EWD_UFAQ' ); ?></label> 
@@ -156,7 +154,6 @@ class EWD_UFAQ_Display_Popular_FAQS extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$post_count = ! empty( $instance['post_count'] ) ? $instance['post_count'] : __( 'Number of FAQs', 'EWD_UFAQ' );
-		$faq_title = ! empty( $instance['faq_title'] ) ? $instance['faq_title'] : __( 'Widget Title', 'EWD_UFAQ' );
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'post_count' ); ?>"><?php _e( 'Number of FAQs:', 'EWD_UFAQ' ); ?></label> 

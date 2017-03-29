@@ -1,6 +1,6 @@
 im in the aboutsage page.php
 <?php get_header(); ?>
-<!-- <?php get_template_part( 'template-parts/content', 'upper-banner' );?> -->
+ <?php get_template_part( 'template-parts/upper-banner' );?>
 
 <div class="about-container">
     <h1 class="subtitle"><?php echo get_field("subtitle"); ?></h1>
@@ -26,3 +26,4 @@ im in the aboutsage page.php
   </p>
   <p class="quote-author">  <?php echo get_field("quote-author"); ?></p>
 </div>
+<?php get_template_part( 'template-parts/lower-banner' );?>

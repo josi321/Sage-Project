@@ -4,13 +4,15 @@ class event_build extends event_call {
   
   public function __construct(){
     $this->events = parent::get_events_data();
+    self::build_event();
   }
 
   public function build_event () {
-
+    
     foreach ($this->events->events as $event) {
 
       $event = $event->event;
+      //echo "<pre>"; print_r($event); echo "</pre>";
       $ev = array();
 
       //if ($event->status == "Live") {
