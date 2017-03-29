@@ -6,6 +6,7 @@ class event_post extends event_call {
   public function update_event_post () {
     
     foreach ($this->event as $meta_key => $value) {
+      echo " META KEYS REQUIRED : ".$meta_key."</br>";
       if ($meta_key !== 'content' || 'title') {
         update_post_meta($this->post_id,$meta_key,$value);
       }
