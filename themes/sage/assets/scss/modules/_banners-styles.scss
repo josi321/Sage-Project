@@ -122,10 +122,7 @@
 
 @media only screen and (max-width: 640px){
 	.page-template-archive{
-	.upper-banner{
-		background-size:110% !important;
-		background-position:top center !important;
-	}
+	
 	.upper-banner-text h4{
 		font-size:9vw !important;
 		font-weight: bold;
@@ -135,11 +132,13 @@
 	}
 }
 	.upper-banner{
-		height: 85vh;
+		height: 75vh;
 		display: flex;
 		flex-wrap:wrap;
 		flex-direction: column;
 		justify-content:flex-end;
+		background-size:110% !important;
+		background-position:top  !important;
 	}
 	.upper-banner-sqaure{
 		width: 100%;
