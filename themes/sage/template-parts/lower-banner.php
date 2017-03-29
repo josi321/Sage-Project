@@ -14,7 +14,7 @@ $RGB_Img_Overlay_color = hex2rgb($Hex_Img_Overlay_color);
 $Final_Rgb_Img_Overlay_color = implode(", ", $RGB_Img_Overlay_color );
 ?>
 
-<div class="lower-banner" style="background:linear-gradient( rgba(<?php echo $Final_Rgb_Img_Overlay_color;  ?>,0.8), rgba(<?php echo $Final_Rgb_Img_Overlay_color;  ?>,0.8)), url(<?php echo get_field("lower_banner_image") ?>)bottom left no-repeat; background-size:cover;">
+<div class="lower-banner" style="background:linear-gradient( rgba(<?php echo $Final_Rgb_Img_Overlay_color;  ?>,0.8), rgba(<?php echo $Final_Rgb_Img_Overlay_color;  ?>,0.8)), url(<?php echo get_field("lower_banner_image") ?>)center left no-repeat; background-size:cover;">
 		
 			<p><span class="lower-banner-title"> <?php echo get_field("lower_banner_big_text") ?> </span> </p>
 		
