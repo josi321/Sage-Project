@@ -18,7 +18,9 @@ $Final_Rgb_Img_Overlay_color = implode(", ", $RGB_Img_Overlay_color );
 		 <div class ="upper-banner-text">
 			<p><?php echo get_field("small_banner_text") ?></p>
 			<h2> <?php echo get_field("big_banner_text") ?> </h2>
-			<?php if (is_front_page() ) { ?>
+
+
+			<?php if (is_front_page() || (is_page(['about','contact','become-a-mentor-or-partner','program'])) ) { ?>
 			<a class="button">GET STARTED</a>
 			<?php } ?>
 

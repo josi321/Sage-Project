@@ -93,7 +93,7 @@ function create_taxonomies($tax,$val) {
 
 function create_tax(){
 
-    $taxonomies= array("Category" => "events","Location" => "events",);
+    $taxonomies= array("Category" => "events","Location" => "events","Program" => "timeline","Apply" => "timeline",);
 
     foreach ($taxonomies as $tax_key => $tax_val) {
 
