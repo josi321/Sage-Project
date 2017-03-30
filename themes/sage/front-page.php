@@ -123,7 +123,7 @@ im in the home page!
 					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
 					<?php endwhile; ?>
 </div>
-<div class="size50 second">					
+<div class="size50 second">
 
 					<?php	$query_news = new WP_Query(array(
 				"posts_per_page" => 1,
@@ -136,7 +136,7 @@ im in the home page!
 </div>
 </div>
 </div>
-</div> 
+</div>
 <!-- END COMMUNITY -->
 </section>
 <!-- Quote section -->
@@ -176,5 +176,5 @@ im in the home page!
     </p>
   </div>
 </div>
-<?php wp_footer(); ?>  
+<?php wp_footer(); ?>
 >>>>>>> Miquelllabres/master
