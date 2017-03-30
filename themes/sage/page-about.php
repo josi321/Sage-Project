@@ -1,12 +1,6 @@
 im in the aboutsage page.php
-<?php /* Template Name: About*/ ?>
-
 <?php get_header(); ?>
-<<<<<<< HEAD
-<?php get_template_part( 'template-parts/upper-banner' );?>
-=======
  <?php get_template_part( 'template-parts/upper-banner' );?>
->>>>>>> Miquelllabres/master
 
 <div class="about-container">
     <h1 class="subtitle"><?php echo get_field("subtitle"); ?></h1>
@@ -32,10 +26,4 @@ im in the aboutsage page.php
   </p>
   <p class="quote-author">  <?php echo get_field("quote-author"); ?></p>
 </div>
-<<<<<<< HEAD
-
-<!--  LOWER BANNER-->
 <?php get_template_part( 'template-parts/lower-banner' );?>
-=======
-<?php get_template_part( 'template-parts/lower-banner' );?>
->>>>>>> Miquelllabres/master
