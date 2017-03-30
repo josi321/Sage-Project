@@ -42,6 +42,21 @@
       }
     }
   }
+  .blue-btn{
+    background-color:#31DCF5;
+    width:50%;
+    padding:1rem 2rem;
+    margin:0 auto;
+    text-align:center;
+    border-radius:10px;
+    margin-top:3rem;
+    margin-bottom:3rem;
+    a{
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+    }
+  }
 }
 
 .partner-logos{
@@ -62,7 +77,6 @@
     margin:1rem auto 0 auto;
   }
 }
-
 .logo_showcase{
   margin-bottom:2rem !important;
   .slick-slide{
@@ -74,13 +88,12 @@
     }
   }
 }
-
-
 .subscribe{
   background-color: #FAFAFA;
   margin:0 auto;
   text-align:center;
   padding:3rem 0;
+  display: inline-block;
   h3{
     color:#F4003C;
     font-size:2rem;
@@ -90,16 +103,35 @@
     font-size:1.5rem;
     padding:0 0.5rem;
   }
-  .subscribe-email {
-    display: inline-block;
+  .email{
+    .mc4wp-form-fields{
+      width:75%;
+      padding:1rem;
+    }
+    .email-label{
+      text-align: left;
+      text-transform: uppercase;
+      padding-left: 2rem;
+    }
     .email-btn{
-      background-color:red;
+      background-color:#F4003C;
       padding:1rem 3rem;
       color:white;
       font-size:1rem;
+      width:80% !important;
+      border-radius:5px;
+      margin-left:1rem;
+    }
+    .email-box{
+      width:80%;
+      margin-left: 2rem;
+      border: none;
+      border-bottom: 2px solid grey;
+      background-color: #FAFAFA;
     }
   }
 }
+
 
 /*DESKTOP*/
 @media only screen and (min-width: 768px){
@@ -129,7 +161,12 @@
         }
       }
     }
-
+  }
+  .become-container .blue-btn{
+    width:20%!important;
+    a{
+    font-size:2rem;
+    }
   }
   .partner-logos{
     width:90%;
@@ -155,4 +192,48 @@
   }
   }
 
+  .subscribe{
+    display:inline;
+    margin-top:3rem;
+    h3{
+      padding-top:3rem;
+      line-height:1.5;
+      font-size:3rem;
+    }
+    .email{
+      .email-label{
+        display:none;
+      }
+    .mc4wp-form-fields{
+      margin:0 auto;
+    .email-flex{
+      display:flex;
+      width: 60%;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-self: center;
+      padding: 0 3rem;
+      height:6vh;
+      .email-box{
+        /*margin-right: 2rem;*/
+        /*padding: 1rem;*/
+        background-color:transparent;
+        /*border-radius: 5px;*/
+        height:5vh;
+        border:none;
+        border-bottom: 5px solid grey;
+      }
+      .email-btn{
+        height:5.3vh;
+        padding:0;
+        font-size:1.5rem;
+        width:40%;
+      }
+      input[type="email"]::-webkit-input-placeholder {
+  color: grey !important;
+}
+    }
+  }
+  }
+  }
 }

@@ -1,0 +1,128 @@
+/*@media only screen and (min-width:768px){
+.community {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  height:80vh;
+  margin:0 auto;
+  padding: 5rem 0;
+
+  .events-div {
+    width: 48%;
+    margin-right: 10px;
+  }
+  .community-right-col {
+    margin-left: 10px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .entrepreneur-div {
+      margin-bottom: 20px;
+      .community-content {
+        height:40vh;
+        .entrepreneur-spotlight {
+          align-self: flex-end;
+          background-color: #d1464f;
+        }
+        .entrepreneur-content {
+          background-color: #d1464f;
+          display: flex;
+          flex-direction: column;
+          height: 20vh;
+          top: 10rem;
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+
+    .news-div {
+      .community-content {
+        height:38vh;
+        .news-spotlight {
+          align-self: flex-end;
+          background-color: #80d6ef;
+        }
+        .news-content {
+          display: flex;
+          background-color: #80d6ef;
+          align-items: flex-end;
+          height: 20vh;
+          top: 9rem;
+          .date {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: white;
+            color: #80d6ef;
+            .day {
+              font-size: 2.5em;
+            }
+          }
+          .news-content-info {
+            display: flex;
+            flex-direction: column;
+            align-self: baseline;
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.community-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:80vh;
+
+  .event-spotlight {
+    background-color: #f7bd45;
+    width: 40%;
+  }
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+  .event-content {
+    display: flex;
+    background-color: #f7bd45;
+    align-self: flex-end;
+    height: 25vh;
+    top: 55vh;
+    width: 100%;
+  }
+  .register {
+    align-self: flex-end;
+    background-color: white;
+    color: #f7bd45;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: orange;
+      font-size: 1.25em;
+
+    }
+  }
+
+
+}
+}*/
