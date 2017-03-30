@@ -1,0 +1,48 @@
+.horzi_timeline {
+  position: relative;
+
+  .horzi_top,.horzi_bottom {
+    display: flex;
+  }
+  .horzi_bottom {
+    justify-content: center;
+  }
+  .timeline_line {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .entry  {
+    background: white;
+    padding:1.5rem;
+    box-shadow: 0 0 6px #ccc;
+    margin: 1rem 0 2rem 5%;
+    position: relative;
+    .circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      border:4px solid #64D8F2;
+      background-color:#f9f9f9;
+      position: absolute;
+      bottom: -46px;
+      left: 50%;
+      margin-left: -12.5px;
+      z-index: 5;
+    }
+    .title {
+      color:#64D8F2;
+      font-size: 1.8rem;
+    }
+  }
+  .horzi_bottom {
+    .entry {
+      margin: 2rem 5rem 1rem 0;
+      .circle {
+        top: -44px;
+      }
+    }
+  }
+}
