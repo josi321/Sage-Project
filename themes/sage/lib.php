@@ -8,7 +8,7 @@ function change_posts_per_page_archive($query) {
        elseif ( $query->is_archive('news')  ) {
            $query->set( 'posts_per_page', 6);
        }
-       elseif ( $query->is_archive('entrepeneur') ) {
+       elseif ( $query->is_archive('entrepreneur') ) {
            $query->set( 'posts_per_page', 6);
        };
    }    

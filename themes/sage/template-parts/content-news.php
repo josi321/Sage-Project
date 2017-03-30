@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The default template for displaying content
@@ -7,8 +8,10 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
-
+if (is_front_page()){
+	$class = 'large-12';
+	$med = 'medium-12';
+}
 ?>
 <?php 
 $color =  get_field("label");
@@ -79,12 +82,18 @@ if(is_single()) { ?>
 		<?php		}else{ ?>
 
 		
-<div class="small-12 medium-6 large-4 columns  entrepeneur" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> style="background:<?php echo $color ?>" >
-	<div class="img" style="background:url(<?php the_post_thumbnail_url("medium") ?> )no-repeat!important ; background-size:cover  !important;" ></div>
+<div class="small-12 medium-6 <?php echo $med ?> large-4 <?php echo $class ?> columns  entrepeneur" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> style="background:<?php echo $color ?>" >
+	<div class="img" style="background:url(<?php the_post_thumbnail_url("medium") ?> )no-repeat!important ; background-size:cover  !important;" >
+		<?php if (is_front_page()){ ?>
+	<div class="event-spotlight" style="background:<?php echo $color ?>">
+            News Spotlight
+          </div>
+<?php } ?>
+	</div>
 
 	<div id="triangle-bottomleft" style="background: linear-gradient(to right top, <?php echo $color ?> 50%, transparent 50%);"></div>
 
-	<div id="trapezoid" style="background:<?php echo $color ?>">
+	<div id="trapezoid"  style="background:<?php echo $color ?>">
 		<?php 
 		$test =	get_field('date');
 		$test = DateTime::createFromFormat("dmY",$test);

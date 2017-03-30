@@ -1,9 +1,9 @@
-<?php
+<?php  
+
 /**
- * The contact template file.
- * Template Name:Sandbox
- */
+* Template name:sandbox
+*/
 
-
-
+$test = new event_build();
+//$test->event_build();
 ?>

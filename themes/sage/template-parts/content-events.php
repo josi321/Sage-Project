@@ -1,10 +1,14 @@
+
 <?php
 /**
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+if (is_front_page()){
+	$class = 'large-12';
+	$med = 'medium-12';
+}
 ?>
 <?php 
 $color =  get_field("label");
@@ -62,6 +66,7 @@ if(is_single()) { ?>
 
 		<div class="box">
 			<div class="entry-content">
+			<h2><?php the_field('content_title') ?></h2>
 					<?php the_content(); ?>
 			</div>
 		
@@ -71,8 +76,14 @@ if(is_single()) { ?>
 		<?php		}else{ ?>
 
 		
-<div class="small-12 medium-6 large-6 columns  entrepeneur" style="background:<?php echo $color ?>" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> >
-	<div class="img" style="background:url(<?php the_post_thumbnail_url("medium") ?> )no-repeat!important ; background-size:cover  !important;" ></div>
+<div class="small-12 medium-6 <?php echo $med ?> large-6 <?php echo $class ?> columns  entrepeneur" style="background:<?php echo $color ?>" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?> >
+	<div class="img" style="background:url(<?php the_post_thumbnail_url("medium") ?> )no-repeat!important ; background-size:cover  !important;" >
+		<?php if (is_front_page()){ ?>
+	<div class="event-spotlight" style="background:<?php echo $color ?>">
+            Events Spotlight
+          </div>
+<?php } ?>
+	</div>
 
 	<div id="triangle-bottomleft" style="background: linear-gradient(to right top, <?php echo $color ?> 50%, transparent 50%);"></div>
 
@@ -82,7 +93,7 @@ if(is_single()) { ?>
 		$test = DateTime::createFromFormat("dmY",$test);
 		echo "<div class='date' style='color:$color'><h2>".$test->format("d")."</h2>";
 		echo "<p>".$test->format("M")." ".$test->format("Y")."</p></div>";	
-	?>
+	?> 
 		<h1><?php the_title() ?></h1>
 		<?php the_excerpt()  ?>
 		<a href="<?php echo get_permalink( $post->ID ); ?>">
