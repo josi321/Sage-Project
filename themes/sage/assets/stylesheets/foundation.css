@@ -7321,6 +7321,21 @@ input[type="submit"] {
     color: #F04;
     margin: 40px 0; }
 
+.faq-title {
+  color: #E0394E;
+  font-weight: bolder;
+  text-align: center; }
+
+.faq {
+  border: none; }
+
+.faq-question {
+  border: none;
+  background: #fff;
+  color: #696969;
+  font-size: 1rem;
+  font-weight: bolder; }
+
 .horzi_timeline {
   position: relative; }
   .horzi_timeline .horzi_top, .horzi_timeline .horzi_bottom {
