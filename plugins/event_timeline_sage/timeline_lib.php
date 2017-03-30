@@ -2,6 +2,7 @@
 class sage_timeline {
 
   public function __construct ($atts) {
+
     $this->orientation = $atts["orientation"];
     $this->title = $atts["title"];
     $this->args = $atts["tax"];
@@ -21,10 +22,10 @@ class sage_timeline {
         'field'    => 'slug',
      ));
    }
-
     $timeline_query = new WP_Query($args);
 
     if($timeline_query->have_posts()) : ?>
+
       <div class="timeline-wrap">
         <?php echo self::get_title_shortcode();
         if ($this->orientation == "verticle") { ?>
@@ -54,7 +55,9 @@ class sage_timeline {
 
         </div>
       </div>
-<?php endif;
+<?php else : 
+echo "No event posts found :(";
+endif;
 
   }
   public function verticle_return() {?>
@@ -63,7 +66,8 @@ class sage_timeline {
       <div class="title"><?php the_title() ?> <div class="triangle"></div></div>
       <h5> <?php echo get_field("timeline_date"); ?> </h5>
       <div class="body">
-        <?php the_content() ?>
+            <h3><?php the_field('subheading', $item); ?></h3>
+            <p><?php the_field('description', $item); ?></p>
       </div>
     </div> <?php
   }
@@ -74,7 +78,8 @@ class sage_timeline {
           <div class="circle"> </div>
           <div class="title"><?php echo get_the_title($item) ?> <div class="triangle"></div></div>
           <div class="body">
-            <?php echo get_post_field('post_content', $item); ?>
+            <h3><?php the_field('subheading', $item); ?></h3>
+            <p><?php the_field('description', $item); ?></p>
           </div>
         </div>
       <?php }?>
