@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 /**
  * This is front-page.php
@@ -9,10 +9,10 @@
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
- */
+ */?>
 
 
-get_header(); ?>
+<?php get_header(); ?>
 
 
  <?php get_template_part( 'template-parts/upper-banner' ); ?>
@@ -43,7 +43,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
-=======
+
 <?php /* Template Name: Home
 [logoshowcase] */ ?>
 im in the home page!
@@ -104,7 +104,7 @@ im in the home page!
 <h1 style="color:red; margin: 0 auto; text-align: center; font-size:3rem;">Community</h1>
 <div class="homeWrap">
 <div class="homeFlex">
->>>>>>> Miquelllabres/master
+
 
 	<?php	$query_events = new WP_Query(array(
 				"posts_per_page" => 1,
@@ -138,12 +138,12 @@ im in the home page!
 </div>
 </div>
 </div>
-<<<<<<< HEAD
-</div>
-=======
-</div> 
 
->>>>>>> Miquelllabres/master
+</div>
+
+</div>
+
+
 <!-- END COMMUNITY -->
 
 </section>
@@ -160,7 +160,7 @@ im in the home page!
   </p>
   <p class="quote-author">  <?php the_field('quote-author'); ?></p>
 </div>
-<!--  Partner section --> 
+<!--  Partner section -->
 <div class="partner-logos">
 
   <h2>Our Partners</h2>
@@ -170,10 +170,9 @@ im in the home page!
 <!--  LOWER BANNER-->
 <?php echo get_template_part( 'template-parts/lower-banner' );?>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <?php get_footer();
-=======
+?>
  <div class="home-subscribe">
   <h3>MAILING LIST</h3>
   <p>Events, stories & more!</p>
@@ -190,9 +189,7 @@ im in the home page!
   </div>
 </div>
 <?php wp_footer(); ?>
->>>>>>> Miquelllabres/master
-=======
- 
+
+
 <?php get_footer();
-?> 
->>>>>>> Miquelllabres/master
+?>
