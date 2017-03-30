@@ -8,6 +8,7 @@ im in the home page!
   <div class="home-flex">
     <div class="box">
       <h2>Workshops</h2>
+
       <div class="icons">
         <?php if ( get_field('workshops-icon') ) {
           $imgarray = get_field( 'workshops-icon' );
@@ -52,7 +53,8 @@ im in the home page!
 </div>
 <!-- Community section -->
 <section>
-</section>
+
+
 <h1 style="color:red; margin: 0 auto; text-align: center; font-size:3rem;">Community</h1>
 <div class="homeWrap">
 <div class="homeFlex">
@@ -90,20 +92,26 @@ im in the home page!
 </div>
 </div>
 </div> 
+
 <!-- END COMMUNITY -->
+
 </section>
-<!-- Quote section -->
+
+ <!-- Quote section -->
+
+
 <div class="quote-block">
   <div class="quote-mark">
     <p>&rdquo;</p>
   </div>
   <p class="quote">
-      <?php echo get_field("quote"); ?>
+      <?php the_field('quote'); ?>
   </p>
-  <p class="quote-author">  <?php echo get_field("quote-author"); ?></p>
+  <p class="quote-author">  <?php the_field('quote-author'); ?></p>
 </div>
-<!--  Partner section -->
+<!--  Partner section --> 
 <div class="partner-logos">
+
   <h2>Our Partners</h2>
   <div class="blueline"></div>
   <?php echo do_shortcode('[logoshowcase]');  ?>
@@ -111,19 +119,6 @@ im in the home page!
 <!--  LOWER BANNER-->
 <?php echo get_template_part( 'template-parts/lower-banner' );?>
 
- <div class="home-subscribe">
-  <h3>MAILING LIST</h3>
-  <p>Events, stories & more!</p>
-  <div class="email">
-    <?php echo do_shortcode('[mc4wp_form id="56"]'); ?>
-  </div>
-  <div class="adress">
-    <h3>ADDRESS</h3>
-    <p>
-      341 Yonge St. 3F<br />
-      Toronto, ON<br />
-      M5B 1S1
-    </p>
-  </div>
-</div>
-<?php wp_footer(); ?>  
+ 
+<?php get_footer();
+?> 
