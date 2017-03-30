@@ -78,7 +78,7 @@ im in the home page!
 					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
 					<?php endwhile; ?>
 </div>
-<div class="size50 second">					
+<div class="size50 second">
 
 					<?php	$query_news = new WP_Query(array(
 				"posts_per_page" => 1,
@@ -91,7 +91,7 @@ im in the home page!
 </div>
 </div>
 </div>
-</div> 
+</div>
 
 <!-- END COMMUNITY -->
 
@@ -109,7 +109,7 @@ im in the home page!
   </p>
   <p class="quote-author">  <?php the_field('quote-author'); ?></p>
 </div>
-<!--  Partner section --> 
+<!--  Partner section -->
 <div class="partner-logos">
 
   <h2>Our Partners</h2>
@@ -119,6 +119,6 @@ im in the home page!
 <!--  LOWER BANNER-->
 <?php echo get_template_part( 'template-parts/lower-banner' );?>
 
- 
+
 <?php get_footer();
 ?> 
