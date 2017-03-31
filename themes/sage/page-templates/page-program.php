@@ -41,10 +41,10 @@ get_header();?>
 		<p class="columna"><?php the_field('cta_text_block_1');?></p>
 		<p class="columna"><?php the_field('cta_text_block_2');?></p>
 	</div>
-<div id="program-timeline">
-	<h2> <?php the_field('timeline_heading');?></h2>
 
-	<!-- PROGRAM TIMELINE GOES HERE -->
+<!-- PROGRAM TIMELINE SECTION-->
+<div id="program-timeline">
+		<?php echo do_shortcode(get_field('program_timeline_shortcode')); ?> 
 
 	<p> <?php the_field( 'timeline_footer_text'); ?></p>
 
