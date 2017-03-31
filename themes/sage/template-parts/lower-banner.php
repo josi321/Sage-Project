@@ -28,7 +28,7 @@ $Final_Rgb_Img_Overlay_color = implode(", ", $RGB_Img_Overlay_color );
 		<div class="lower-banner-text">
 		<h3> <?php echo get_field("lower_banner_text") ?> </h3>
 		<h3> <?php echo get_field("lower_lower_banner_text") ?> </h3>
-		<a class="button">Apply today</a>
+		<a class="button" href="http://localhost:8888/sage/apply/">Apply today</a>
 		</div>
 		
 	 </div>

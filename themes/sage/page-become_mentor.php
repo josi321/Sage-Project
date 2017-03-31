@@ -1,6 +1,6 @@
 <?php /* Template Name: Become a mentor or partner
 [logoshowcase] */ ?>
-im in the become a mentor or partner page!
+
 
 <?php get_header(); ?>
 <?php get_template_part( 'template-parts/upper-banner' );?>
