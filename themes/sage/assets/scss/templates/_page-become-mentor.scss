@@ -107,6 +107,7 @@
     .mc4wp-form-fields{
       width:75%;
       padding:1rem;
+      margin: 0 auto;
     }
     .email-label{
       text-align: left;
@@ -208,7 +209,7 @@
       margin:0 auto;
     .email-flex{
       display:flex;
-      width: 60%;
+      width: 100%;
       margin: 0 auto;
       justify-content: space-between;
       align-self: center;
@@ -237,3 +238,11 @@
   }
   }
 }
+@media only screen and (min-width:1050px){
+.mc4wp-form-fields{
+     
+.email-flex{
+      width: 60% !important;}
+    }
+}
+

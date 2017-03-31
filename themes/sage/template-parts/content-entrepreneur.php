@@ -30,7 +30,8 @@ if(is_single()) { ?>
 		<div class="labelFlex">
 			<div class="labelTitle">
 				<h1><?php the_title() ?></h1>
-				<?php the_excerpt()  ?>
+				<?php the_excerpt() ?>
+				
 			</div>	
 		</div>
 	</div>

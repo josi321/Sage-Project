@@ -48,7 +48,7 @@ get_header();?>
 
 	<p> <?php the_field( 'timeline_footer_text'); ?></p>
 
-
+<?php wp_reset_query(); ?>
 <!-- LOWER BANNER-->
 <?php get_template_part( 'template-parts/lower-banner' ); ?>
 

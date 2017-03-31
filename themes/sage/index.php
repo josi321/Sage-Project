@@ -34,10 +34,10 @@ get_header(); ?>
 			foundationpress_pagination();
 		elseif ( is_paged() ) :
 		?>
-			<nav id="post-nav">
+			<!-- <nav id="post-nav">
 				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
+			</nav> -->
 		<?php endif; ?>
 
 	</article>
