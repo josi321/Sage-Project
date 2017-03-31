@@ -9,7 +9,6 @@
  */ ?>
 
 
-apply.php
 
  <?php get_header(); ?>
 

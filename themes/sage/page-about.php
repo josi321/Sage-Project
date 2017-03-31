@@ -1,4 +1,4 @@
-im in the aboutsage page.php
+
 <?php get_header(); ?>
  <?php get_template_part( 'template-parts/upper-banner' );?>
 
