@@ -1,6 +1,6 @@
 <?php /* Template Name: Home
 [logoshowcase] */ ?>
-im in the home page!
+
 <?php get_header(); ?>
 <?php get_template_part( 'template-parts/upper-banner' );?>
 <div class="home-container">
@@ -52,55 +52,54 @@ im in the home page!
   </div>
 </div>
 <!-- Community section -->
-<section>
 
-
-<h1 style="color:red; margin: 0 auto; text-align: center; font-size:3rem;">Community</h1>
+<div>
+  <h1 style="color:red; margin: 0 auto; text-align: center; font-size:3rem;">Community</h1>
 <div class="homeWrap">
-<div class="homeFlex">
+  <div class="homeFlex">
+     <?php  $query_events = new WP_Query(array(
+        "posts_per_page" => 1,
+        'post_type' => 'events',
+        "order"=> "ASC" ));?>
+        <?php while ( $query_events->have_posts() ) : $query_events->the_post(); ?>
+        <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
+        <?php endwhile; ?>
+      <div class="flexcolumn">
+        <div class="size50">
+          <?php $query_entre = new WP_Query(array(
+            "posts_per_page" => 1,
+            'post_type' => 'entrepreneur',
+            "order"=> "ASC"));?>
+          <?php while ( $query_entre->have_posts() ) : $query_entre->the_post(); ?>
+          <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
+          <?php endwhile; ?>
+        </div>
+        <div class="size50 second">
 
-	<?php	$query_events = new WP_Query(array(
-				"posts_per_page" => 1,
-				'post_type' => 'events',
-				"order"=> "ASC"
-				));?>
-				<?php while ( $query_events->have_posts() ) : $query_events->the_post(); ?>
-					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-					<?php endwhile; ?>
-<div class="flexcolumn">
-<div class="size50">
-<?php	$query_entre = new WP_Query(array(
-				"posts_per_page" => 1,
-				'post_type' => 'entrepreneur',
-				"order"=> "ASC"
-				));?>
-				<?php while ( $query_entre->have_posts() ) : $query_entre->the_post(); ?>
-					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-					<?php endwhile; ?>
-</div>
-<div class="size50 second">
+        <?php $query_news = new WP_Query(array(
+        "posts_per_page" => 1,
+        'post_type' => 'news',
+        "order"=> "ASC" ));?>
+      
+        <?php while ( $query_news->have_posts() ) : $query_news->the_post(); ?>
+        <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
+        <?php endwhile; 
+        wp_reset_query();
+        ?>
+        </div>
+      </div>
+  </div>
 
-					<?php	$query_news = new WP_Query(array(
-				"posts_per_page" => 1,
-				'post_type' => 'news',
-				"order"=> "ASC"
-				));?>
-				<?php while ( $query_news->have_posts() ) : $query_news->the_post(); ?>
-					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-					<?php endwhile; ?>
-</div>
-</div>
 </div>
 </div>
 
 <!-- END COMMUNITY -->
 
-</section>
 
  <!-- Quote section -->
 
 
-<div class="quote-block">
+ <div class="quote-block">
   <div class="quote-mark">
     <p>&rdquo;</p>
   </div>
@@ -108,14 +107,14 @@ im in the home page!
       <?php the_field('quote'); ?>
   </p>
   <p class="quote-author">  <?php the_field('quote-author'); ?></p>
-</div>
+</div> 
 <!--  Partner section -->
 <div class="partner-logos">
 
   <h2>Our Partners</h2>
   <div class="blueline"></div>
   <?php echo do_shortcode('[logoshowcase]');  ?>
-</div>
+</div> 
 <!--  LOWER BANNER-->
 <?php echo get_template_part( 'template-parts/lower-banner' );?>
 
