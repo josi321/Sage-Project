@@ -7324,17 +7324,35 @@ input[type="submit"] {
 .faq-title {
   color: #E0394E;
   font-weight: bolder;
-  text-align: center; }
+  text-align: center;
+  margin: 5vh 0 3vh 0; }
 
 .faq {
-  border: none; }
+  margin: 0 auto; }
 
 .faq-question {
-  border: none;
   background: #fff;
   color: #696969;
   font-size: 1rem;
   font-weight: bolder; }
+
+.accordion-title:hover, .accordion-title:focus, .accordion-title:active {
+  background-color: #fff;
+  color: #E0394E; }
+
+.faq-answer {
+  color: #696969;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  line-height: 180%; }
+
+.accordion-title:hover {
+  background-color: #fff;
+  color: #696969; }
+
+@media (min-width: 600px) {
+  .faq-question {
+    font-size: 1.3rem; } }
 
 .horzi_timeline {
   position: relative; }
@@ -7393,7 +7411,7 @@ body .timeline_line {
   width: 1px;
   height: 100%;
   background: #64D8F2;
-  left: 50%;
+  left: 7%;
   margin-left: -1px;
   top: 0; }
 
@@ -7404,35 +7422,22 @@ body .entries {
     display: block;
     content: ""; }
   body .entries .entry {
-    width: calc(53.6% - 80px);
+    position: relative;
+    width: 50%;
     background: white;
-    float: left;
+    float: right;
     padding: 20px;
     clear: both;
-    text-align: right;
+    text-align: left;
     -webkit-box-shadow: 0 0 12px #CCC;
             box-shadow: 0 0 12px #CCC; }
     body .entries .entry:not(:first-child) {
-      margin-top: -60px; }
+      margin-top: 25px; }
     body .entries .entry .title {
       font-size: 32px;
       margin-bottom: 12px;
       position: relative;
       color: #64D8F2; }
-      body .entries .entry .title:before {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        border: 4px solid #64D8F2;
-        background-color: #f9f9f9;
-        border-radius: 100%;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        right: -73px;
-        z-index: 1000; }
       body .entries .entry .title.big:before {
         width: 24px;
         height: 24px;
@@ -7444,29 +7449,99 @@ body .entries {
         height: 0;
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
-        border-left: 15px solid white;
+        border-left: 15px solid transparent;
+        border-right: 15px solid white;
         position: absolute;
-        right: -35px;
-        top: 10px; }
-    body .entries .entry .body {
-      color: #aaa; }
-      body .entries .entry .body p {
-        line-height: 1.4em; }
-    body .entries .entry:nth-child(2n) {
-      text-align: left;
-      float: right;
-      width: calc(54.5% - 80px); }
-      body .entries .entry:nth-child(2n) .title:before {
-        left: -63px; }
-      body .entries .entry:nth-child(2n) .title.big:before {
-        -webkit-transform: translate(-8px, -50%);
-            -ms-transform: translate(-8px, -50%);
-                transform: translate(-8px, -50%); }
-      body .entries .entry:nth-child(2n) .title .triangle {
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
         left: -50px;
-        border-right: 15px solid white; }
+        top: 10px; }
+
+@media (min-width: 600px) {
+  body .timeline-wrap {
+    padding: 3rem 1.5rem;
+    background: #F9F9F9; }
+  body .timeline_title {
+    text-align: center;
+    padding: 1rem 0 2.5rem 0; }
+    body .timeline_title h3 {
+      color: #E2364A; }
+  body .timeline_line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #64D8F2;
+    left: 50%;
+    margin-left: -1px;
+    top: 0; }
+  body .entries {
+    position: relative; }
+    body .entries:after {
+      clear: both;
+      display: block;
+      content: ""; }
+    body .entries .entry {
+      width: calc(50% - 41px);
+      background: white;
+      float: left;
+      padding: 20px;
+      clear: both;
+      text-align: right;
+      -webkit-box-shadow: 0 0 12px #CCC;
+              box-shadow: 0 0 12px #CCC; }
+      body .entries .entry:not(:first-child) {
+        margin-top: -60px; }
+      body .entries .entry .title {
+        font-size: 32px;
+        margin-bottom: 12px;
+        position: relative;
+        color: #64D8F2; }
+        body .entries .entry .title:before {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          border: 4px solid #64D8F2;
+          background-color: #f9f9f9;
+          border-radius: 100%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          right: -73px;
+          z-index: 1000; }
+        body .entries .entry .title.big:before {
+          width: 24px;
+          height: 24px;
+          -webkit-transform: translate(8px, -50%);
+              -ms-transform: translate(8px, -50%);
+                  transform: translate(8px, -50%); }
+        body .entries .entry .title .triangle {
+          width: 0;
+          height: 0;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 15px solid white;
+          position: absolute;
+          right: -35px;
+          top: 10px; }
+      body .entries .entry .body {
+        color: #aaa; }
+        body .entries .entry .body p {
+          line-height: 1.4em; }
+      body .entries .entry:nth-child(2n) {
+        text-align: left;
+        float: right;
+        width: calc(54.5% - 80px); }
+        body .entries .entry:nth-child(2n) .title:before {
+          left: -63px; }
+        body .entries .entry:nth-child(2n) .title.big:before {
+          -webkit-transform: translate(-8px, -50%);
+              -ms-transform: translate(-8px, -50%);
+                  transform: translate(-8px, -50%); }
+        body .entries .entry:nth-child(2n) .title .triangle {
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          left: -50px;
+          border-right: 15px solid white; } }
 
 .sites-button {
   background: #FF6908;
