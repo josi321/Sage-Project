@@ -7406,56 +7406,25 @@ body .timeline_title {
   body .timeline_title h3 {
     color: #E2364A; }
 
-body .timeline_line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background: #64D8F2;
-  left: 7%;
-  margin-left: -1px;
-  top: 0; }
+body .entries .entry {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  clear: both;
+  text-align: left;
+  -webkit-box-shadow: 0 0 12px #CCC;
+          box-shadow: 0 0 12px #CCC; }
+  body .entries .entry .title {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #64D8F2; }
+  body .entries .entry .body {
+    color: #aaa; }
+    body .entries .entry .body p {
+      line-height: 1.4em; }
 
-body .entries {
-  position: relative; }
-  body .entries:after {
-    clear: both;
-    display: block;
-    content: ""; }
-  body .entries .entry {
-    position: relative;
-    width: 50%;
-    background: white;
-    float: right;
-    padding: 20px;
-    clear: both;
-    text-align: left;
-    -webkit-box-shadow: 0 0 12px #CCC;
-            box-shadow: 0 0 12px #CCC; }
-    body .entries .entry:not(:first-child) {
-      margin-top: 25px; }
-    body .entries .entry .title {
-      font-size: 32px;
-      margin-bottom: 12px;
-      position: relative;
-      color: #64D8F2; }
-      body .entries .entry .title.big:before {
-        width: 24px;
-        height: 24px;
-        -webkit-transform: translate(8px, -50%);
-            -ms-transform: translate(8px, -50%);
-                transform: translate(8px, -50%); }
-      body .entries .entry .title .triangle {
-        width: 0;
-        height: 0;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-left: 15px solid transparent;
-        border-right: 15px solid white;
-        position: absolute;
-        left: -50px;
-        top: 10px; }
-
-@media (min-width: 600px) {
+@media screen and (min-width: 640px) and (max-width: 1050px) {
   body .timeline-wrap {
     padding: 3rem 1.5rem;
     background: #F9F9F9; }
@@ -7479,7 +7448,7 @@ body .entries {
       display: block;
       content: ""; }
     body .entries .entry {
-      width: calc(50% - 41px);
+      width: calc(53.6% - 80px);
       background: white;
       float: left;
       padding: 20px;
