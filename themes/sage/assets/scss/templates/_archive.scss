@@ -1,5 +1,5 @@
-.archive-container-events{width: 70%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
-.archive-container{width: 80%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
+.archive-container-events{width: 90%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
+.archive-container{width: 90%; margin: 0 auto;  display: flex; flex-wrap: wrap;}
 .entrepeneur{ padding: 0; border: 5px solid white;box-sizing: border-box;
     .newtrapezoid{height:10vh;}
     #trapezoid{ padding:10px;color: white;
@@ -87,7 +87,7 @@
     
     .img{min-height:30vh;}
     #trapezoid{
-        height:20vh  ;
+        height:auto  ;
         .date{margin-top: -40px;
                 p{padding-left:10px;
                     font-size: 1rem !important;}
@@ -116,9 +116,11 @@
 
 
 @media only screen and (min-width: 638px){
+    .archive-container-events{width:90%;}  
     .homeFlex{flex-direction:row;
         #trapezoid{
-        height:10vh !important ;
+        height:auto !important ;
+        p{font-size:1.2rem !important;}
     }
     .img{min-height:45vh !important;}
     .size50{
@@ -141,10 +143,13 @@
  }
 .img{min-height:30vh !important;}
 .entry-header{min-height:300px !important;
-    #trapezoide{min-height:150px;}
+    #trapezoide{min-height:150px;
+        .date{max-height:100px !important;
+                min-width: 90px !important;}}
 }
 }
 @media only screen and (min-width:1050px){
+
     .homeFlex{
     .event-spotlight{font-size:1.5rem;font-weight:bold;}
     .img{min-height:55vh !important;}
@@ -154,11 +159,13 @@
     .img{min-height:30vh !important;}
     }
 }
-
- .archive-container{width:90%;}  
+ .archive-container-events{width:80%;}  
+   
  .entry-header{min-height:500px !important;
     #trapezoide{min-height:170px;
-        .date{min-width:100px;}
+
+        .date{min-width:110px !important;
+             max-height:110px !important;}
         .labelTitle{
             h1{ padding-top: 5px !important;}
         }
